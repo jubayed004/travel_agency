@@ -26,6 +26,7 @@ class AppIcons{
   static const String sort = "$basePath/sort.svg";
   static const String unlock = "$basePath/unlock.svg";
   static const String user = "$basePath/User_3.svg";
+  static const String email = "$basePath/Envelope.svg";
 
 
 }

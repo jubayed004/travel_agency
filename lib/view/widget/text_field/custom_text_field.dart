@@ -46,7 +46,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
             ))
             : null,
         prefixIcon: widget.prefixSvgIcon != null? Padding(
-          padding: const EdgeInsetsDirectional.only(start: 12, top: 10, bottom: 10, end: 8),
+          padding: const EdgeInsetsDirectional.only(start: 10, top: 6, bottom: 6, end: 6),
           child: SvgPicture.asset(widget.prefixSvgIcon!),
         ): null,
         border: OutlineInputBorder(

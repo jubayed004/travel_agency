@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:travel_agency/constant/app_colors.dart';
 import 'controller/language_controller.dart';
 import 'core/route/app_route.dart';
 
@@ -18,6 +19,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       defaultTransition: Transition.noTransition,
       transitionDuration: const Duration(milliseconds: 200),
+      //Theme Section
+      theme: ThemeData(
+        fontFamily: "Regular",
+        primaryColor: AppColors.primaryColor,
+      ),
       //Route Section
       initialRoute: AppRoute.splashScreen, //Navigate Splash Screen
       navigatorKey: Get.key,

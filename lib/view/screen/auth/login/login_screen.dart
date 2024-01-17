@@ -55,6 +55,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     height: 8,
                   ),
                   CustomTextField(
+                    textInputType: TextInputType.number,
                       isPassword: true,
                       hintText: "Enter your Password".tr,
                       prefixSvgIcon: AppIcons.unlock,
@@ -88,7 +89,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
                    CustomButton(
                     color: AppColors.primaryColor,
-                    text: 'Login '.tr,
+                    text: 'Login '.tr, onTap: () {  },
                   ),
                   const SizedBox(height: 8),
                   Center(

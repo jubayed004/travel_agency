@@ -18,6 +18,8 @@ class ForgetScreen extends StatefulWidget {
 class _ForgetScreenState extends State<ForgetScreen> {
   @override
   Widget build(BuildContext context) {
+    final double height = MediaQuery.of(context).size.height;
+    final double width = MediaQuery.of(context).size.width;
     return SafeArea(
       bottom: false,
       top: false,
@@ -32,9 +34,9 @@ class _ForgetScreenState extends State<ForgetScreen> {
             child: Icon(Icons.arrow_back_ios_new,
                 color: Colors.black.withOpacity(0.8)),
           ),
-          title: const Text(
-            " Forget Password",
-            style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
+          title:  Text(
+            " Forget Password".tr,
+            style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
           ),
         ),
         body: LayoutBuilder(
@@ -73,14 +75,9 @@ class _ForgetScreenState extends State<ForgetScreen> {
 
                   ///-----Forget Button-----///
 
-                  GestureDetector(
-                    onTap: (){
-                    Get.toNamed(AppRoute.loginScreen);
-                    },
-                    child: CustomButton(
-                      color: AppColors.primaryColor,
-                      text: 'Forget  '.tr,
-                    ),
+                  CustomButton(
+                    color: AppColors.primaryColor,
+                    text: 'Forget  '.tr, onTap: () {   Get.toNamed(AppRoute.loginScreen); },
                   ),
                 ],
               ),

@@ -102,7 +102,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
                   CustomButton(
                     color: AppColors.primaryColor,
-                    text: 'Sign Up '.tr,
+                    text: 'Sign Up '.tr, onTap: () {  },
                   ),
                   const SizedBox(height: 8),
                   Center(

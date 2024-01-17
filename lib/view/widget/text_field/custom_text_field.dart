@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:travel_agency/constant/app_colors.dart';
-import 'package:travel_agency/constant/app_icons.dart';
 
 class CustomTextField extends StatefulWidget {
   const CustomTextField({super.key,
@@ -10,7 +9,8 @@ class CustomTextField extends StatefulWidget {
     this.isPassword = false,
     required this.controller,
     this.textInputAction = TextInputAction.next,
-    this.validator
+    this.validator,
+    this.textInputType = TextInputType.text,
   });
 
   final String hintText;
@@ -19,6 +19,7 @@ class CustomTextField extends StatefulWidget {
   final bool isPassword;
   final TextInputAction textInputAction;
   final FormFieldValidator? validator;
+  final TextInputType textInputType;
 
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();}
@@ -33,7 +34,9 @@ class _CustomTextFieldState extends State<CustomTextField> {
       textInputAction: widget.textInputAction,
       obscureText: widget.isPassword ? obscureText : false,
       validator: widget.validator,
+      keyboardType: widget.textInputType,
       decoration: InputDecoration(
+
         filled: true,
         fillColor: Colors.white,
         suffixIcon: widget.isPassword ? GestureDetector(
@@ -46,7 +49,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
             ))
             : null,
         prefixIcon: widget.prefixSvgIcon != null? Padding(
-          padding: const EdgeInsetsDirectional.only(start: 12, top: 10, bottom: 10, end: 8),
+          padding: const EdgeInsetsDirectional.only(start: 10, top: 6, bottom: 6, end: 6),
           child: SvgPicture.asset(widget.prefixSvgIcon!),
         ): null,
         border: OutlineInputBorder(

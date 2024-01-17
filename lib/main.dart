@@ -19,15 +19,18 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       defaultTransition: Transition.noTransition,
       transitionDuration: const Duration(milliseconds: 200),
+
       //Theme Section
       theme: ThemeData(
         fontFamily: "Regular",
         primaryColor: AppColors.primaryColor,
       ),
+
       //Route Section
-      initialRoute: AppRoute.splashScreen, //Navigate Splash Screen
+      initialRoute: AppRoute.navBarScreen, ///First Navigate Splash Screen
       navigatorKey: Get.key,
       getPages: AppRoute.routes,
+
       //Languages Section
       translations: Languages(),
       locale: const Locale("en" , "US"),

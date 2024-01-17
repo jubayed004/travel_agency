@@ -2,11 +2,15 @@
 Map<String, String> english = {
 
 
-  "sign_up" :   "Sign Up",
-  "email" :   "Email",
-  "forgot_Password" :   "Forgot Password",
-  "dont_have_an_account" :   "Don’t have an account?",
+  "Sign Up" :   "Sign Up",
+  "Email" :   "Email",
+  "Forgot Password" :   "Forgot Password",
+  "Don’t have an account?" :   "Don’t have an account?",
   "login" :   "Login",
-  "password" :   "Password",
-  "enter_your_Email" :   "Enter your Email",
+  "Password" :   "Password",
+  "Enter your Email" :   "Enter your Email",
+  "Forget" :   "Forget",
+  "Confirm Password" :   "Confirm Password",
+  "Already have an account? " :   "Already have an account? ",
+  "LonIn Here" :   "LonIn Here",
 };

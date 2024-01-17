@@ -13,7 +13,7 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return  SafeArea(
       child: Scaffold(
-        backgroundColor: AppColors.primaryColor,
+        backgroundColor: AppColors.bgColor,
         body: GetBuilder<SplashController>(
             init: SplashController(),
             builder: (controller) {

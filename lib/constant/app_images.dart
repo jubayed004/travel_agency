@@ -21,5 +21,3 @@ class AppImages{
   static const String unsplash3 = "$basePath/unsplash3.png";
   static const String unsplash4 = "$basePath/unsplash4.png";
   static const String unsplashJ9O3WcJ5N74 = "$basePath/unsplash_J9O3WcJ5N74.png";
-
-}

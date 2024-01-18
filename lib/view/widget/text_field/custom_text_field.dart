@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:travel_agency/constant/app_colors.dart';
-import 'package:travel_agency/constant/app_icons.dart';
 
 class CustomTextField extends StatefulWidget {
   const CustomTextField({super.key,

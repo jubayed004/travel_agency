@@ -3,17 +3,21 @@ Map<String, String> english = {
 
   "Travel Agency" : "Travel Agency",
 
-  //Recent Trip Screen
+  ///-----------Recent Trip Screen-----------///
+
   "Recent Trip" : "Recent Trip",
 
-  //Search Screen
+  ///------------Search Screen------------///
+
   "Search" : "Search",
   "Search hare" : "Search hare",
 
-  //Popular Screen
+  ///----------Popular Screen----------///
+
   "Popular Place" : "Popular Place",
 
-  //profile Screen
+  ///----------profile Screen----------///
+
   "Profile" : "Profile",
   "Edit profile" : "Edit profile",
   "Language" : "Language",
@@ -23,7 +27,8 @@ Map<String, String> english = {
   "Share with friend" : "Share with friend",
   "Log out" : "Log out",
 
-  //Home Screen
+  ///-----------Home Screen----------///
+
   "Home" : "Home",
   "Favorite" : "Favorite",
   "Booking" : "Booking",
@@ -32,7 +37,8 @@ Map<String, String> english = {
   "Favorite place" : "Favorite place",
   "Hello, beautiful people!" : "Hello, beautiful people!",
 
-  //Details Screen
+  ///-----------Details Screen-----------///
+
   "Days Package" : "Days Package",
   "Booking Now" : "Booking Now",
   "active" : "active",
@@ -47,9 +53,11 @@ Map<String, String> english = {
   "Time and Date" : "Time and Date",
 
   ///-------Splash Screen-------///
-"travel Journal" : "travel Journal",
+
+  "travel Journal" : "travel Journal",
 
   ///-------Onboarding Screen--------///
+
   "Life is shot and the world is wide" : "Life is shot and the world is wide",
   "It’s a big world out there go explore" : "It’s a big world out there go explore",
   "People don’t take trip’s , trip’s fake people" : "People don’t take trip’s , trip’s fake people",
@@ -58,6 +66,7 @@ Map<String, String> english = {
   "Back" : "Back",
 
   ///----------Login Screen----------///
+
   "Email" :   "Email",
   "Forgot Password" :   "Forgot Password",
   "Don’t have an account? Create Now" :   "Don’t have an account? Create Now",
@@ -66,6 +75,7 @@ Map<String, String> english = {
   "Enter your Email" :   "Enter your Email",
 
   ///--------Sign up Screen--------///
+
   "Sign Up" :   "Sign Up",
   "Confirm Password" :   "Confirm Password",
   "Already have an account? " :   "Already have an account? ",

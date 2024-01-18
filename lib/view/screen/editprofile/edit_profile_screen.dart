@@ -22,77 +22,89 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
         backgroundColor: AppColors.bgColor,
         centerTitle: true,
         leading: const Icon(Icons.arrow_back_ios_new),
-        title: const Text("Edit Profile",style: TextStyle(
-          fontWeight: FontWeight.w600,
-          fontSize: 16
-        ),),
+        title: const Text(
+          "Edit Profile",
+          style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
+        ),
       ),
-      body: LayoutBuilder(builder: (BuildContext context, BoxConstraints constraints) {
-        return SingleChildScrollView(
-          padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 24),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                "Name".tr,
-                style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
-              ),
-              const SizedBox(
-                height: 8,
-              ),
-              CustomTextField(
-                  hintText: "Enter your Name".tr,
-                  prefixSvgIcon: AppIcons.email,
-                  controller: TextEditingController()),
-             const SizedBox(height: 16,),
-              Text(
-                "Email".tr,
-                style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
-              ),
-              const SizedBox(
-                height: 8,
-              ),
-              CustomTextField(
-                  hintText: "Enter your Email".tr,
-                  prefixSvgIcon: AppIcons.email,
-                  controller: TextEditingController()),
-             const SizedBox(height: 16,),
-              Text(
-                "Phone".tr,
-                style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
-              ),
-              const SizedBox(
-                height: 8,
-              ),
-              CustomTextField(
-                textInputType: TextInputType.number,
-                  hintText: "Enter your PhoneNumber".tr,
-                  prefixSvgIcon: AppIcons.email,
-                  controller: TextEditingController()),
-             const SizedBox(height: 16,),
-              Text(
-                "Address".tr,
-                style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
-              ),
-              const SizedBox(
-                height: 8,
-              ),
-              CustomTextField(
-                  hintText: "Enter your Address".tr,
-                  prefixSvgIcon: AppIcons.email,
-                  controller: TextEditingController()),
-             const SizedBox(height: 24,),
-              CustomButton(
-                color: AppColors.primaryColor,
-                text: 'Save '.tr, onTap: () { 
-                  // Get.toNamed(AppRoute.profilescreen);
-              },
-              ),
-
-            ],
-          ),
-        );
-      },),
+      body: LayoutBuilder(
+        builder: (BuildContext context, BoxConstraints constraints) {
+          return SingleChildScrollView(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 24),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "Name".tr,
+                  style: const TextStyle(
+                      fontWeight: FontWeight.w600, fontSize: 16),
+                ),
+                const SizedBox(
+                  height: 8,
+                ),
+                CustomTextField(
+                    hintText: "Enter your Name".tr,
+                    prefixSvgIcon: AppIcons.email,
+                    controller: TextEditingController()),
+                const SizedBox(
+                  height: 16,
+                ),
+                Text(
+                  "Email".tr,
+                  style: const TextStyle(
+                      fontWeight: FontWeight.w600, fontSize: 16),
+                ),
+                const SizedBox(
+                  height: 8,
+                ),
+                CustomTextField(
+                    hintText: "Enter your Email".tr,
+                    prefixSvgIcon: AppIcons.email,
+                    controller: TextEditingController()),
+                const SizedBox(height: 16),
+                Text(
+                  "Phone".tr,
+                  style: const TextStyle(
+                      fontWeight: FontWeight.w600, fontSize: 16),
+                ),
+                const SizedBox(
+                  height: 8,
+                ),
+                CustomTextField(
+                    textInputType: TextInputType.number,
+                    hintText: "Enter your PhoneNumber".tr,
+                    prefixSvgIcon: AppIcons.email,
+                    controller: TextEditingController()),
+                const SizedBox(
+                  height: 16,
+                ),
+                Text(
+                  "Address".tr,
+                  style: const TextStyle(
+                      fontWeight: FontWeight.w600, fontSize: 16),
+                ),
+                const SizedBox(
+                  height: 8,
+                ),
+                CustomTextField(
+                    hintText: "Enter your Address".tr,
+                    prefixSvgIcon: AppIcons.email,
+                    controller: TextEditingController()),
+                const SizedBox(
+                  height: 24,
+                ),
+                CustomButton(
+                  color: AppColors.primaryColor,
+                  text: 'Save '.tr,
+                  onTap: () {
+                    Get.toNamed(AppRoute.profileScreen);
+                  },
+                ),
+              ],
+            ),
+          );
+        },
+      ),
     );
   }
 }

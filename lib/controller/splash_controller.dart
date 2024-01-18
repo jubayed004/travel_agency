@@ -13,7 +13,7 @@ class SplashController extends GetxController{
 
   void navigation(){
     Timer(const Duration(seconds: 3), () {
-      Get.offAndToNamed(AppRoute.notificationScreen);
+      Get.offAndToNamed(AppRoute.navBarScreen);
     });
   }
 }

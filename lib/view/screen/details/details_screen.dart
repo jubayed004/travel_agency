@@ -18,14 +18,11 @@ class DetailsScreen extends StatelessWidget {
         bottomNavigationBar: Container(
           height: 100,
           width: MediaQuery.of(context).size.width,
-          padding: const EdgeInsets.symmetric(horizontal: 18,vertical: 10),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 24),
           decoration: const BoxDecoration(
-            color: AppColors.whiteColor,
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(30),
-              topRight: Radius.circular(30)
-            )
-          ),
+              color: AppColors.whiteColor,
+              borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(30), topRight: Radius.circular(30))),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -34,28 +31,32 @@ class DetailsScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("\$50${AppConstant.currency}",style: TextStyle(
-                    fontSize: 20,
-                    fontFamily: "SemiBold"
-                  ),),
-                  Text("5 Days Package".tr,style: TextStyle(
-                      fontSize: 16,
-                      fontFamily: "SemiBold"
-                  ),),
-
+                  const Text(
+                    "\$50${AppConstant.currency}",
+                    style: TextStyle(fontSize: 20, fontFamily: "SemiBold"),
+                  ),
+                  Text(
+                    "5 Days Package".tr,
+                    style:
+                        const TextStyle(fontSize: 16, fontFamily: "SemiBold"),
+                  ),
                 ],
               ),
               Container(
-                padding: const EdgeInsets.symmetric(vertical: 12,horizontal: 20),
+                padding:
+                    const EdgeInsets.symmetric(vertical: 12, horizontal: 20),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
                   color: AppColors.primaryColor,
                 ),
-                child: Text("Booking Now".tr,style: TextStyle(
-                  fontFamily: "Regular",
-                  fontSize: 18,
-                  color: AppColors.whiteColor,
-                ),),
+                child: Text(
+                  "Booking Now".tr,
+                  style: const TextStyle(
+                    fontFamily: "Regular",
+                    fontSize: 18,
+                    color: AppColors.whiteColor,
+                  ),
+                ),
               ),
             ],
           ),
@@ -64,7 +65,7 @@ class DetailsScreen extends StatelessWidget {
           physics: const BouncingScrollPhysics(),
           child: Column(
             children: [
-              //Details Screen Top Section
+              ///-------Details Screen Top Section-------///
               SizedBox(
                 height: MediaQuery.of(context).size.height / 3,
                 width: MediaQuery.of(context).size.width,
@@ -88,7 +89,11 @@ class DetailsScreen extends StatelessWidget {
                     Positioned(
                       top: 10,
                       left: 20,
-                      child: SvgPicture.asset(AppIcons.arrowLeft),
+                      child: GestureDetector(
+                          onTap: () {
+                            Get.back();
+                          },
+                          child: SvgPicture.asset(AppIcons.arrowLeft)),
                     ),
                     Positioned(
                       top: 10,
@@ -107,10 +112,15 @@ class DetailsScreen extends StatelessWidget {
                         height: 35,
                         width: 100,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(17.5),
-                          color: AppColors.whiteColor
-                        ),
-                        child: Center(child: Text("active".tr,style: TextStyle(color: AppColors.primaryColor),)),
+                            borderRadius: BorderRadius.circular(17.5),
+                            color: AppColors.whiteColor.withOpacity(0.7)),
+                        child: Center(
+                            child: Text(
+                          "active".tr,
+                          style: const TextStyle(
+                              fontWeight: FontWeight.w600,
+                              color: AppColors.primaryColor),
+                        )),
                       ),
                     ),
                   ],
@@ -120,10 +130,11 @@ class DetailsScreen extends StatelessWidget {
                 height: 12,
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
                 child: Column(
                   children: [
-                    //Trip Title
+                    ///----------Trip Title----------///
                     const Text(
                       "5 day cox's bazar tour package From Mymensingh",
                       maxLines: 2,
@@ -135,7 +146,8 @@ class DetailsScreen extends StatelessWidget {
                     const SizedBox(
                       height: 5,
                     ),
-                    //Trip Location
+
+                    ///-------------Trip Location-----------///
                     Row(
                       children: [
                         SvgPicture.asset(AppIcons.location),
@@ -149,23 +161,22 @@ class DetailsScreen extends StatelessWidget {
                         )),
                       ],
                     ),
-                    const SizedBox(
-                      height: 12,
-                    ),
+                    const SizedBox(height: 12),
+
+                     /// ------------Date & time---------///
                     Row(
                       children: [
-                        Text("Time and Date".tr,
-                            style: TextStyle(
+                        Text("Date & Time".tr,
+                            style: const TextStyle(
                               fontFamily: "SemiBold",
                               fontSize: 14,
                             ))
                       ],
                     ),
-                    const SizedBox(
-                      height: 12,
-                    ),
+                    const SizedBox(height: 12),
                     Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 10, vertical: 8),
                       width: MediaQuery.of(context).size.width,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
@@ -176,7 +187,7 @@ class DetailsScreen extends StatelessWidget {
                         children: [
                           Text(
                             "Check In".tr,
-                            style: TextStyle(
+                            style: const TextStyle(
                                 fontSize: 14, fontWeight: FontWeight.w800),
                           ),
                           Row(
@@ -184,7 +195,7 @@ class DetailsScreen extends StatelessWidget {
                               Column(
                                 children: [
                                   Text("Date".tr),
-                                  Text(
+                                  const Text(
                                     "05/01/2024",
                                     style: TextStyle(
                                         fontSize: 14,
@@ -192,13 +203,13 @@ class DetailsScreen extends StatelessWidget {
                                   )
                                 ],
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 24,
                               ),
                               Column(
                                 children: [
                                   Text("Time".tr),
-                                  Text(
+                                  const Text(
                                     "10:00 AM",
                                     style: TextStyle(
                                         fontSize: 14,
@@ -215,7 +226,8 @@ class DetailsScreen extends StatelessWidget {
                       height: 8,
                     ),
                     Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 10, vertical: 8),
                       width: MediaQuery.of(context).size.width,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
@@ -226,7 +238,7 @@ class DetailsScreen extends StatelessWidget {
                         children: [
                           Text(
                             "Check Out".tr,
-                            style: TextStyle(
+                            style: const TextStyle(
                                 fontSize: 14, fontWeight: FontWeight.w800),
                           ),
                           Row(
@@ -234,7 +246,7 @@ class DetailsScreen extends StatelessWidget {
                               Column(
                                 children: [
                                   Text("Date".tr),
-                                  Text(
+                                  const Text(
                                     "12/01/2024",
                                     style: TextStyle(
                                         fontSize: 14,
@@ -242,13 +254,13 @@ class DetailsScreen extends StatelessWidget {
                                   )
                                 ],
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 24,
                               ),
                               Column(
                                 children: [
                                   Text("Time".tr),
-                                  Text(
+                                  const Text(
                                     "8:00 PM",
                                     style: TextStyle(
                                         fontSize: 14,
@@ -264,18 +276,20 @@ class DetailsScreen extends StatelessWidget {
                     const SizedBox(
                       height: 12,
                     ),
+
                     Text("Package".tr,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontFamily: "SemiBold",
                           fontSize: 14,
                         )),
                     const SizedBox(
                       height: 12,
                     ),
+                    ///----------Description--------///
                     Row(
                       children: [
                         Text("Description".tr,
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontFamily: "SemiBold",
                               fontSize: 14,
                             ))
@@ -285,7 +299,7 @@ class DetailsScreen extends StatelessWidget {
                       height: 8,
                     ),
                     const ReadMoreText(
-                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim eget amet viverra eget fames rhoncus. Eget enim venenatis enim porta egestas malesuada et. Consequat mauris lacus euismod montes.",
+                      "Lorem ipsum dolor sit amet, consecrate disciplining elite. Dissimilar eget amet riviera get frames rhonchus. Egret enum venation enum port gestates malesuada et. Consequent Lauris lacks modernism montes.",
                       trimLines: 2,
                       colorClickableText: Colors.pink,
                       trimMode: TrimMode.Line,
@@ -299,44 +313,57 @@ class DetailsScreen extends StatelessWidget {
                     const SizedBox(
                       height: 12,
                     ),
+                    ///---------Instruction-------///
+
                     Row(
                       children: [
                         Text("Instructions".tr,
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontFamily: "SemiBold",
                               fontSize: 14,
                             ))
                       ],
                     ),
                     const SizedBox(height: 8),
-                    const ReadMoreText("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim eget amet viverra eget fames rhoncus. Eget enim venenatis enim porta egestas malesuada et. Consequat mauris lacus euismod montes.",
+                    const ReadMoreText(
+                      "Lorem ipsum dolor sit amet, consecrate disciplining elite. Dignissim get amet riviera get frames rhonchus. Egret enum venation enum port egestas malesuada et. Consequent Lauris lacks modernism montes.",
                       trimLines: 2,
                       colorClickableText: Colors.pink,
                       trimMode: TrimMode.Line,
                       trimCollapsedText: ' Show more',
                       trimExpandedText: ' Show less',
-                      lessStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
-                      moreStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                      lessStyle:
+                          TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                      moreStyle:
+                          TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
                     ),
 
                     const SizedBox(height: 12),
+
+                    ///---------Child Policy-------///
                     Row(
                       children: [
-                        Text("Child Policy".tr, style: TextStyle(fontFamily: "SemiBold", fontSize: 14,),),
+                        Text(
+                          "Child Policy".tr,
+                          style: const TextStyle(
+                            fontFamily: "SemiBold",
+                            fontSize: 14,
+                          ),
+                        ),
                       ],
                     ),
-                    const SizedBox(
-                      height: 8,
-                    ),
+                    const SizedBox( height: 8),
                     const ReadMoreText(
-                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim eget amet viverra eget fames rhoncus. Eget enim venenatis enim porta egestas malesuada et. Consequat mauris lacus euismod montes.",
+                      "Lorem ipsum dolor sit amet, consecrate disciplining elit. Dignissim get amet viverra get frames rhoncus. Egret enum venenatis enum port egestas malesuada et. Consequat Lauris lacks modernism montes.",
                       trimLines: 2,
                       colorClickableText: Colors.pink,
                       trimMode: TrimMode.Line,
                       trimCollapsedText: ' Show more',
                       trimExpandedText: ' Show less',
-                      lessStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
-                      moreStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                      lessStyle:
+                          TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                      moreStyle:
+                          TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
                     ),
                   ],
                 ),

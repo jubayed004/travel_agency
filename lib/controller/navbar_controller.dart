@@ -13,7 +13,6 @@ class NavBarController extends GetxController{
     const BookingScreen(),
     const ProfileScreen(),
   ];
-
   void navigation({required int currentIndex}) {
     bottomNavIndex.value = currentIndex;
     update();

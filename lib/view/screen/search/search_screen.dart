@@ -20,14 +20,14 @@ class SearchScreen extends StatelessWidget {
         child: Column(
           children: [
             CustomSearch(hintText: "Search hare", onTap: (){},),
-            SizedBox(height: 24,),
+            const SizedBox(height: 24,),
             Expanded(
               child: ListView.builder(
                 itemCount: 100,
                 shrinkWrap: true,
                 physics: const BouncingScrollPhysics(),
                 itemBuilder: (BuildContext context, int index){
-                  return Padding(
+                  return const Padding(
                     padding: EdgeInsets.only(bottom: 12.0),
                     child: CustomCard(
                       imageURL: "https://assets.traveltriangle.com/blog/wp-content/uploads/2016/07/limestone-rock-phang-nga-1-Beautiful-limestone-rock-in-the-ocean.jpg",

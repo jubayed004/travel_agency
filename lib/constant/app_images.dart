@@ -1,4 +1,4 @@
-class AppImages{
+class AppImages {
   static const String basePath = "assets/images";
   static const String forgetPass = "$basePath/forgetpass.png";
   static const String leftCardBG = "$basePath/Left Card BG.png";
@@ -21,3 +21,5 @@ class AppImages{
   static const String unsplash3 = "$basePath/unsplash3.png";
   static const String unsplash4 = "$basePath/unsplash4.png";
   static const String unsplashJ9O3WcJ5N74 = "$basePath/unsplash_J9O3WcJ5N74.png";
+  static const String splash = "$basePath/splash.png";
+}

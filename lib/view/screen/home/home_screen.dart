@@ -13,15 +13,16 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
+      top: false,
+      bottom: false,
       child: Scaffold(
         backgroundColor: AppColors.bgColor,
         body: SingleChildScrollView(
-          padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 44),
           physics: const BouncingScrollPhysics(),
           child: Column(
             children: [
-
-              //Congratulations Section -- Top Section
+              ///----Congratulations Section -- Top Section---///
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 12.0),
                 child: Row(
@@ -37,7 +38,7 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
 
-              //Search Section
+              ///------Search Section-----///
               GestureDetector(
                 onTap: (){
                   Get.toNamed(AppRoute.searchScreen);
@@ -56,7 +57,7 @@ class HomeScreen extends StatelessWidget {
                       Row(
                         children: [
                           SvgPicture.asset(AppIcons.search),
-                          Text("Search hare"),
+                          const Text("Search hare"),
                         ],
                       ),
                       SvgPicture.asset(AppIcons.sort),
@@ -65,7 +66,8 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
 
-              //Favorite place Section
+              ///----------Favorite place Section----------///
+
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 18.0),
                 child: Row(
@@ -86,9 +88,7 @@ class HomeScreen extends StatelessWidget {
                           },
                           child: Text("see all".tr,style: const TextStyle(fontSize: 14,color: AppColors.primaryColor),),
                         ),
-                        const SizedBox(
-                          width: 5,
-                        ),
+                        const SizedBox(width: 5),
                         SvgPicture.asset(
                           AppIcons.arrowRight,
                           height: 20,
@@ -100,10 +100,11 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
 
-              //Favorite place List
+              ///-------Favorite place List------///
+
               SizedBox(
                 width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height/3,
+                height: MediaQuery.of(context).size.height/3+40,
                 child: ListView.builder(
                   physics: const BouncingScrollPhysics(),
                   itemCount: 10,
@@ -123,8 +124,7 @@ class HomeScreen extends StatelessWidget {
                   },
                 ),
               ),
-
-              //Recent Add place Section
+              ///---------Recent Add place Section------///
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 18.0),
                 child: Row(
@@ -159,19 +159,20 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
 
-              //Recent Add place List
+              ///-----------Recent Add place List---------///
+
               ListView.builder(
                 physics: const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 itemCount: 10,
                 itemBuilder: (BuildContext context, int index) {
                   return Padding(
-                    padding: EdgeInsets.only(bottom: 8.0),
+                    padding: const EdgeInsets.only(bottom: 8.0),
                     child: GestureDetector(
                       onTap: (){
                         Get.toNamed(AppRoute.detailsScreen);
                       },
-                      child: CustomCard(
+                      child: const CustomCard(
                         imageURL: "https://assets.traveltriangle.com/blog/wp-content/uploads/2016/07/limestone-rock-phang-nga-1-Beautiful-limestone-rock-in-the-ocean.jpg",
                         title: "2 day Kuyakata tour package From Mymensingh",
                         location: "Kuyakata, Potuakhali, Barisal, Dhaka, Bangladesh",

@@ -10,7 +10,11 @@ class FavoriteScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.bgColor,
       appBar: AppBar(
-        title: const Text("Favorite"),
+        centerTitle: true,
+        title: const Text("Favorite",style: TextStyle(
+          fontSize: 20,
+          fontWeight: FontWeight.w600
+        ),),
         backgroundColor: AppColors.bgColor,
         elevation: 0,
       ),
@@ -22,12 +26,12 @@ class FavoriteScreen extends StatelessWidget {
           shrinkWrap: true,
           physics: const NeverScrollableScrollPhysics(),
           itemBuilder: (BuildContext context, int index){
-            return Padding(
+            return const Padding(
               padding: EdgeInsets.only(bottom: 12.0),
               child: CustomCard(
                   imageURL: "https://assets.traveltriangle.com/blog/wp-content/uploads/2016/07/limestone-rock-phang-nga-1-Beautiful-limestone-rock-in-the-ocean.jpg",
-                  title: "5 day cox's bazar tour package From Mymensingh",
-                  location: "Cox’s bazar, Chattogram, Dhaka, Bangladesh",
+                  title: "5 day cox's bazaar tour package From mymenshing",
+                  location: "Cox’s bazaar, Chromatogram, Dhaka, Bangladesh",
               ),
             );
           },

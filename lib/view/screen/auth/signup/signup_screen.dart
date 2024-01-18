@@ -27,6 +27,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   ///----- Login Image-----///
+
                   Center(
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 48.0),
@@ -43,46 +44,34 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     "Full Name".tr,
                     style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
                   ),
-                  const SizedBox(
-                    height: 8,
-                  ),
+                  const SizedBox(height: 8),
                   CustomTextField(
                       hintText: "Enter your Name".tr,
                       prefixSvgIcon: AppIcons.profile,
                       controller: TextEditingController()),
-                  const SizedBox(
-                    height: 8,
-                  ),
+                  const SizedBox(height: 8),
                   Text(
                     "Email".tr,
                     style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
                   ),
-                  const SizedBox(
-                    height: 8,
-                  ),
+                  const SizedBox(height: 8),
                   CustomTextField(
 
                       hintText: "Enter your Email".tr,
                       prefixSvgIcon: AppIcons.callHung,
                       controller: TextEditingController()),
-                  const SizedBox(
-                    height: 8,
-                  ),
+                  const SizedBox(height: 8),
                   Text(
                     "Password".tr,
                     style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
                   ),
-                  const SizedBox(
-                    height: 8,
-                  ),
+                  const SizedBox(height: 8),
                   CustomTextField(
                       isPassword: true,
                       hintText: "Enter your Password".tr,
                       prefixSvgIcon: AppIcons.unlock,
                       controller: TextEditingController()),
-                  const SizedBox(
-                    height: 8,
-                  ),
+                  const SizedBox(height: 8),
                   Text(
                     "Confirm Password".tr,
                     style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16),

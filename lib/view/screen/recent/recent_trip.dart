@@ -22,7 +22,7 @@ class RecentTrip extends StatelessWidget {
           shrinkWrap: true,
           physics: const NeverScrollableScrollPhysics(),
           itemBuilder: (BuildContext context, int index){
-            return Padding(
+            return const Padding(
               padding: EdgeInsets.only(bottom: 12.0),
               child: CustomCard(
                 imageURL: "https://assets.traveltriangle.com/blog/wp-content/uploads/2016/07/limestone-rock-phang-nga-1-Beautiful-limestone-rock-in-the-ocean.jpg",

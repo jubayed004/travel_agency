@@ -17,12 +17,11 @@ class SplashScreen extends StatelessWidget {
         body: GetBuilder<SplashController>(
             init: SplashController(),
             builder: (controller) {
-              return const Center(
-                child: Text("Travel Agency",
-                  style: TextStyle(
-                      fontSize: 20,
-                  fontWeight: FontWeight.w600
-                ),),
+              return  Center(
+                child: Padding(
+                  padding: const EdgeInsets.all(50.0),
+                  child: Image.asset(AppImages.splash,),
+                ),
               );
             }
         ),

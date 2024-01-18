@@ -21,7 +21,11 @@ class _LanguageScreenState extends State<LanguageScreen> {
         appBar: AppBar(
           backgroundColor: AppColors.bgColor,
           centerTitle: true,
-          leading: const Icon(Icons.arrow_back_ios_new),
+          leading: GestureDetector(
+              onTap: () {
+                Get.back();
+              },
+              child: const Icon(Icons.arrow_back_ios_new)),
           title: const Text(
             "Language",
             style: TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
@@ -73,14 +77,15 @@ class _LanguageScreenState extends State<LanguageScreen> {
                 decoration: ShapeDecoration(
                   color: AppColors.whiteColor,
                   shape: RoundedRectangleBorder(
-                    side: const BorderSide(width: 0.50, color: AppColors.bgColor),
+                    side:
+                        const BorderSide(width: 0.50, color: AppColors.bgColor),
                     borderRadius: BorderRadius.circular(8),
                   ),
                 ),
                 child: Row(
                   children: [
                     Radio(
-                        value: "bangla",
+                        value: "Bangali",
                         groupValue: seletedValue,
                         activeColor: AppColors.primaryColor,
                         onChanged: (value) {
@@ -91,7 +96,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
                     const Padding(
                       padding: EdgeInsets.only(
                           left: 16, right: 16, top: 16, bottom: 16),
-                      child: Text("Bangal"),
+                      child: Text("Bangali"),
                     ),
                   ],
                 ),

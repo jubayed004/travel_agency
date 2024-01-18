@@ -29,46 +29,44 @@ class _LoginScreenState extends State<LoginScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   ///----- Login Image-----///
-                  SizedBox(child: Image.asset(AppImages.login),),
-                  const SizedBox(height: 24,),
+                  SizedBox(
+                    child: Image.asset(AppImages.login),
+                  ),
+                  const SizedBox(height: 24),
 
                   ///-----Form Field-----///
-                   Text(
+                  Text(
                     "Email".tr,
-                    style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
+                    style: const TextStyle(
+                        fontWeight: FontWeight.w600, fontSize: 16),
                   ),
-                  const SizedBox(
-                    height: 8,
-                  ),
+                  const SizedBox(height: 8),
                   CustomTextField(
                       hintText: "Enter your Email".tr,
                       prefixSvgIcon: AppIcons.callHung,
                       controller: TextEditingController()),
-                  const SizedBox(
-                    height: 16,
-                  ),
-                   Text(
+                  const SizedBox(height: 16),
+                  Text(
                     "Password".tr,
-                    style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
+                    style: const TextStyle(
+                        fontWeight: FontWeight.w600, fontSize: 16),
                   ),
                   const SizedBox(
                     height: 8,
                   ),
                   CustomTextField(
-                    textInputType: TextInputType.number,
+                      textInputType: TextInputType.number,
                       isPassword: true,
                       hintText: "Enter your Password".tr,
                       prefixSvgIcon: AppIcons.unlock,
                       controller: TextEditingController()),
-                  const SizedBox(
-                    height: 16,
-                  ),
-                   Row(
+                  const SizedBox(height: 16),
+                  Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       const SizedBox(),
                       GestureDetector(
-                        onTap: (){
+                        onTap: () {
                           Get.toNamed(AppRoute.forgetScreen);
                         },
                         child: Text(
@@ -81,20 +79,21 @@ class _LoginScreenState extends State<LoginScreen> {
                       )
                     ],
                   ),
-                  const SizedBox(
-                    height: 24,
-                  ),
+                  const SizedBox(height: 24),
 
                   ///-----Login Button-----///
 
-                   CustomButton(
+                  CustomButton(
                     color: AppColors.primaryColor,
-                    text: 'Login '.tr, onTap: () {  },
+                    text: 'Login '.tr,
+                    onTap: () {
+                      Get.toNamed(AppRoute.navBarScreen);
+                    },
                   ),
                   const SizedBox(height: 8),
                   Center(
                     child: GestureDetector(
-                      onTap: (){
+                      onTap: () {
                         Get.toNamed(AppRoute.signUpScreen);
                       },
                       child: Text.rich(
@@ -108,7 +107,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 fontWeight: FontWeight.w400,
                               ),
                             ),
-                             TextSpan(
+                            TextSpan(
                               text: 'Sign Up'.tr,
                               style: const TextStyle(
                                 color: AppColors.primaryColor,

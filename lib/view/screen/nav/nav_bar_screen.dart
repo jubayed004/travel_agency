@@ -14,15 +14,15 @@ class NavBarScreen extends StatelessWidget {
       init: NavBarController(),
       builder: (controller) {
         return Scaffold(
-          //Call All BottomNavigation Screen
+          ///--------Call All BottomNavigation Scree-------//
           body: controller.screens[controller.bottomNavIndex.value],
 
-          //BottomNavigationBar Section
+          ///-------BottomNavigationBar Section------///
           bottomNavigationBar: BottomNavigationBar(
             currentIndex: controller.bottomNavIndex.value,
             iconSize: 28,
             onTap: (index){
-              //BottomNavigation Screen Change Function
+              ///--------BottomNavigation Screen Change Function-------///
               controller.navigation(currentIndex: index);
             },
             selectedItemColor: AppColors.primaryColor,

@@ -25,6 +25,8 @@ class _ForgetScreenState extends State<ForgetScreen> {
       top: false,
       child: Scaffold(
         backgroundColor: AppColors.bgColor,
+
+        ///----------AppBar--------///
         appBar: AppBar(
           backgroundColor: AppColors.bgColor,
           leading: GestureDetector(
@@ -46,7 +48,9 @@ class _ForgetScreenState extends State<ForgetScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+
                   ///----- Forget Image-----///
+
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 18.0),
                     child: Image.asset(AppImages.forgetPass),
@@ -56,6 +60,7 @@ class _ForgetScreenState extends State<ForgetScreen> {
                   ),
 
                   ///-----Form Field-----///
+
                   Text(
                     "Email".tr,
                     style: const TextStyle(
